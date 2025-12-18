@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EterNote - Yazı</title>
+    <meta
+      name="description"
+      content="Eren Blog üzerinde seçtiğiniz yazının detayları."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-dark">
+    <div class="background-gradient"></div>
+
+    <header class="site-header">
+      <div class="logo-title">
+        <a href="index.html" class="logo-link">
+          <img
+            src="LOGOERENBEYAZ.png"
+            alt="Site Logosu"
+            class="site-logo"
+          />
+        </a>
+        <div>
+          <h1 class="site-title">EterNote</h1>
+          <p class="site-subtitle">Denemeler, hikayeler ve notlar...</p>
+        </div>
+      </div>
+
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Blog</a>
+        <a href="admin.html" class="nav-link">Admin</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <article id="postDetail" class="card post-detail">
+        <p id="postDetailStatus" class="muted">Yazı yükleniyor...</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; <span id="yearDetail"></span> EterNote</span>
+      <a href="index.html" class="muted">Tüm yazılara dön</a>
+    </footer>
+
+    <script src="post.js"></script>
+  </body>
+</html>
+
+

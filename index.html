@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Eren'in Blogu</title>
+    <meta
+      name="description"
+      content="Yasin Eren'in kişisel blogu - yazılar, düşünceler ve projeler."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-dark">
+    <div class="background-gradient"></div>
+
+    <header class="site-header">
+      <div class="logo-title">
+        <a href="index.html" class="logo-link">
+          <img
+            src="LOGOERENBEYAZ.png"
+            alt="Site Logosu"
+            class="site-logo"
+          />
+        </a>
+        <div>
+          <h1 class="site-title">EterNote</h1>
+          <p class="site-subtitle">
+            Denemeler, hikayeler ve notlar...
+          </p>
+        </div>
+      </div>
+
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link nav-link-active">Blog</a>
+        <a href="admin.html" class="nav-link">Admin</a>
+        <button id="themeToggle" class="btn ghost-btn theme-toggle-btn" type="button" aria-label="Tema değiştir">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="hero hero-center">
+        <div class="hero-text hero-text-center">
+          <div class="hero-world-wrapper animate-fade-up">
+            <a href="other-sites.html" class="hero-world-link">
+              <div class="hero-world-orbit">
+                <img
+                  src="world.gif"
+                  alt="Dönen dünya animasyonu"
+                  class="hero-world-image"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="posts" class="posts-section">
+        <div class="section-header">
+          <h3>Son Yazılar</h3>
+        </div>
+
+        <div id="postsGrid" class="posts-grid">
+          <!-- JavaScript ile kartlar eklenecek -->
+        </div>
+
+        <template id="postCardTemplate">
+          <article class="post-card animate-fade-up">
+            <div class="post-meta">
+              <span class="post-date"></span>
+              <span class="post-tag"></span>
+            </div>
+            <h4 class="post-title"></h4>
+            <p class="post-excerpt"></p>
+          </article>
+        </template>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; <span id="year"></span> Eren Blog</span>
+      <span class="muted">
+        Eternal.corp – Tüm hakları saklıdır.
+      </span>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
+

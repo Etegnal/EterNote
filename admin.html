@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>EterNote - Admin Paneli</title>
+    <meta
+      name="description"
+      content="Eren Blog için yazı ekleme ve yönetim paneli."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-dark">
+    <div class="background-gradient background-gradient-admin"></div>
+
+    <header class="site-header">
+      <div class="logo-title">
+        <a href="index.html" class="logo-link">
+          <img
+            src="LOGOERENBEYAZ.png"
+            alt="Site Logosu"
+            class="site-logo"
+          />
+        </a>
+        <div>
+          <h1 class="site-title">EterNote Admin</h1>
+          <p class="site-subtitle">
+            Denemeler, hikayeler ve notlar için yönetim paneli.
+          </p>
+        </div>
+      </div>
+
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Blog</a>
+        <a href="admin.html" class="nav-link nav-link-active">Admin</a>
+        <button id="adminThemeToggle" class="btn ghost-btn theme-toggle-btn" type="button" aria-label="Tema değiştir">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="content admin-layout">
+      <!-- Giriş Ekranı -->
+      <section id="loginSection" class="card login-card animate-fade-up">
+        <h2>Admin Girişi</h2>
+        <p class="muted">
+          Sadece yetkili kullanıcı giriş yapabilir.
+        </p>
+        <form id="loginForm" class="form">
+          <div class="form-group">
+            <label for="username">Kullanıcı Adı</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              autocomplete="username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Şifre</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn primary-btn full-width">
+            Giriş Yap
+          </button>
+          <p id="loginError" class="error-text" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <!-- Admin Paneli -->
+      <section
+        id="adminSection"
+        class="admin-panel"
+        aria-hidden="true"
+      >
+        <div class="admin-header">
+          <div>
+            <h2>Yazı Yönetimi</h2>
+            <p class="muted">
+              Buradan yeni yazılar ekleyebilir ve mevcut yazılarını görebilirsin.
+            </p>
+          </div>
+          <div class="admin-actions">
+            <a href="index.html" class="btn secondary-btn">
+              Blogu Görüntüle
+            </a>
+            <button id="logoutBtn" class="btn ghost-btn" type="button">
+              Çıkış Yap
+            </button>
+          </div>
+        </div>
+
+        <div class="admin-grid">
+          <section class="card animate-fade-up delay-1">
+            <h3>Yazı Oluştur / Düzenle</h3>
+            <form id="postForm" class="form">
+              <div class="form-group">
+                <label for="postTitle">Başlık</label>
+                <input
+                  type="text"
+                  id="postTitle"
+                  name="postTitle"
+                  placeholder="Yazının başlığı..."
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="postTag">Etiket (İsteğe bağlı)</label>
+                <input
+                  type="text"
+                  id="postTag"
+                  name="postTag"
+                  placeholder="Genel, Kod, Hayat..."
+                />
+              </div>
+              <div class="form-group">
+                <label for="postExcerpt">Kısa Açıklama</label>
+                <textarea
+                  id="postExcerpt"
+                  name="postExcerpt"
+                  rows="3"
+                  placeholder="Anasayfada gözükecek kısa özet..."
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="postContent">İçerik (detay)</label>
+                <textarea
+                  id="postContent"
+                  name="postContent"
+                  rows="10"
+                  placeholder="İsteğe bağlı uzun içerik veya notlar..."
+                ></textarea>
+              </div>
+              <button id="postSubmitBtn" type="submit" class="btn primary-btn full-width">
+                Yazıyı Kaydet
+              </button>
+              <p
+                id="postSuccess"
+                class="success-text"
+                aria-live="polite"
+              ></p>
+            </form>
+          </section>
+
+          <section class="card animate-fade-up delay-2">
+            <h3>Mevcut Yazılar</h3>
+            <p class="muted">
+              Bu liste tarayıcıdaki localStorage verilerine göre güncellenir.
+            </p>
+            <div id="adminPostsList" class="admin-posts-list">
+              <!-- JavaScript ile doldurulacak -->
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; <span id="adminYear"></span> EterNote Admin</span>
+      <span class="muted">
+        Bilgi güçtür!
+      </span>
+    </footer>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
+
+

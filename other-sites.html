@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Other Sites - EterNote</title>
+    <meta
+      name="description"
+      content="EterNote diğer projeler ve siteler."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-dark">
+    <div class="background-gradient"></div>
+
+    <header class="site-header">
+      <div class="logo-title">
+        <a href="index.html" class="logo-link">
+          <img
+            src="LOGOERENBEYAZ.png"
+            alt="Site Logosu"
+            class="site-logo"
+          />
+        </a>
+        <div>
+          <h1 class="site-title">EterNote</h1>
+          <p class="site-subtitle">
+            Denemeler, hikayeler ve notlar...
+          </p>
+        </div>
+      </div>
+
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Blog</a>
+        <a href="admin.html" class="nav-link">Admin</a>
+        <a href="other-sites.html" class="nav-link nav-link-active">Other Sites</a>
+        <button id="themeToggle" class="btn ghost-btn theme-toggle-btn" type="button" aria-label="Tema değiştir">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="other-sites-section">
+        <div class="section-header">
+          <h2 class="other-sites-title">Other Sites</h2>
+          <p class="other-sites-description muted">
+            Diğer projelerim ve çalışmalarımı buradan keşfedebilirsin.
+          </p>
+        </div>
+
+        <div class="other-sites-grid">
+          <a
+            href="https://etegnal.github.io/Weathernal/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="other-site-card animate-fade-up"
+          >
+            <div class="other-site-icon">🌤️</div>
+            <h3 class="other-site-card-title">Weathernal</h3>
+            <p class="other-site-card-description">
+              Hava durumu uygulaması. Şehir bazlı hava durumu bilgileri, 
+              5 günlük tahmin ve detaylı meteoroloji verileri.
+            </p>
+            <span class="other-site-link">Ziyaret Et →</span>
+          </a>
+
+          <a
+            href="https://etegnal.github.io/Eternal-Secret/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="other-site-card animate-fade-up delay-1"
+          >
+            <div class="other-site-icon">🔐</div>
+            <h3 class="other-site-card-title">Eternal Secret</h3>
+            <p class="other-site-card-description">
+              Bulmaca ve gizem oyunu. Sırları keşfet, ipuçlarını çöz ve 
+              Eternal Secret'ı hatasız bulmaya çalış.
+            </p>
+            <span class="other-site-link">Ziyaret Et →</span>
+          </a>
+
+          <a
+            href="https://drive.google.com/file/d/1CGS8f5gYWzw_MiA3hZ_SiBjYp14C1FYu/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="other-site-card animate-fade-up delay-2"
+          >
+            <img src="Be Max.jpeg" alt="BE MAX" class="other-site-image" />
+            <h3 class="other-site-card-title">BE MAX</h3>
+            <p class="other-site-card-description">
+              Hız ve parkurun muhteşem birleşimi. Mobil oyunumuzu deneyin ve aşık olun.
+            </p>
+            <span class="other-site-link">Ziyaret Et →</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; <span id="year"></span> Eren Blog</span>
+      <span class="muted">
+        Eternal.corp – Tüm hakları saklıdır.
+      </span>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
